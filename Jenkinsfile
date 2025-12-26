@@ -21,11 +21,11 @@ pipeline {
                 withCredentials([
                     usernamePassword(
                         credentialsId: "docker-cred",
-                        usernameVariable: "DOCKER-USER",
-                        passwordVariable: "DOCKER-PSWD"
+                        usernameVariable: "DOCKER_USER",
+                        passwordVariable: "DOCKER_PSWD"
                     )
                 ]) {
-                    sh 'echo $DOCKER-PSWD | docker login -u $DOCKER-USER --password-stdin'
+                    sh 'echo $DOCKER_PSWD | docker login -u $DOCKER_USER --password-stdin'
                 }
             }
         }
@@ -53,7 +53,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Deploy to Dev Environment') {
             when {
                 branch 'dev'
