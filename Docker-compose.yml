@@ -10,7 +10,6 @@ services:
 
   node-exporter:
     image: prom/node-exporter:latest
-    container_name: node-exporter
     network_mode: "host"
     pid: "host"
     restart: unless-stopped
