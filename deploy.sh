@@ -4,10 +4,10 @@ compose_file="Docker-compose.yml"
 echo "Deploying react app using Docker compose file"
 
 # Stop and remove old containers
-docker-compose -f $COMPOSE_FILE down
+docker compose -f $COMPOSE_FILE down
 
 # Start containers in detached mode
-docker-compose -f $compose_file up -d 
+docker compose -f $compose_file up -d 
 
 # Check if deployment succeeded
 if [ $? -eq 0 ]; then
