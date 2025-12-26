@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         IMAGE_NAME = "proj3-im"
-        DEV_REPO  = "kowsik140602/dev"
-        PROD_REPO = "kowsik140602/prod"
+        DEV_REPO  = "vikram140602/dev"
+        PROD_REPO = "vikram140602/prod"
     }
 
     stages {
