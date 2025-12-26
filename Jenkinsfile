@@ -66,7 +66,7 @@ pipeline {
 
         stage('Deploy to prod Environment') {
             when {
-                branch 'main'
+                branch 'master'
             }
             steps {
                 sh 'chmod +x deploy.sh'
