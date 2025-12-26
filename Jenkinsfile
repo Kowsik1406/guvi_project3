@@ -63,6 +63,16 @@ pipeline {
                 sh './deploy.sh'
             }
         }
+
+        stage('Deploy to prod Environment') {
+            when {
+                branch 'main'
+            }
+            steps {
+                sh 'chmod +x deploy.sh'
+                sh './deploy.sh'
+            }
+        }
     }
 
     post {
