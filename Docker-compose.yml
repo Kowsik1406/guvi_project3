@@ -3,7 +3,6 @@ version: "3.8"
 services:
   frontend:
     image: proj3-im
-    container_name: frontend
     ports:
       - "80:80"
     restart: unless-stopped
